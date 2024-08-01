@@ -7,8 +7,8 @@ const ExploreMenu = ({ category, setCategory }) => {
     <div className="explore-menu" id="explore-menu">
       <h1>Explore our menu</h1>
       <p className="explore-menu-text">
-        Choose from various of product. Our moto is to deliver best dishes to
-        you plate, and changing your dining table
+        Choose from various product. Our moto is to deliver best dishes to your
+        plate, and changing your dining habits.
       </p>
 
       <div className="explore-menu-list">
