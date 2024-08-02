@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/navbar/navbar";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
@@ -7,12 +7,16 @@ import Cart from "./pages/Cart/Cart";
 import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import Footer from "./components/Footer/Footer";
 import AppDownload from "./components/AppDownload/AppDownload";
+import LoginPopup from "./components/LoginPopup/LoginPopup";
 
 const App = () => {
+  const [Login, setLogin] = useState(false);
   return (
     <>
+      {Login ? <LoginPopup setLogin={setLogin} /> : <></>}
+
       <div className="app">
-        <Navbar />
+        <Navbar setLogin={setLogin} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
