@@ -8,7 +8,7 @@ const addFood = async (req, res) => {
   }
 
   let image_filename = req.file.filename;
-  console.log(image_filename)
+  
   const food = new foodModel({
     name: req.body.name,
     description: req.body.description,  
@@ -33,7 +33,7 @@ const listFood = async(req,res)=>{
     res.json({success:true,data:foods})
     
   } catch (error) {
-    console.log(error);
+    
     res.json({success:false,message:error})
   }
 }
@@ -45,7 +45,7 @@ const removeFood = async(req,res)=>{
     await foodModel.findByIdAndDelete(req.body._id);
     res.json({success:true,message:"Food removed"})
   } catch (error) {
-    console.log(error);
+    
     res.json({success:false,message:"error"})
     
   }
