@@ -1,4 +1,4 @@
-import placeOrder from "../controllers/orderController.js";
+import {placeOrder} from "../controllers/orderController.js";
 import express from "express";
 import authMiddleware from "../middlewares/auth.js"
 
