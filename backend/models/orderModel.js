@@ -8,7 +8,10 @@ const orderSchema = new mongoose.Schema({
   status : {type:String,default:"food is processing"},
   date :   {type:Date,default:Date.now()},
   payment: {type:Boolean,default:false},
+
 })
+
 
 const orderModel = mongoose.models.order || mongoose.model("order",orderSchema);
 export default orderModel;
+
