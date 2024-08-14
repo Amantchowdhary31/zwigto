@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./verify.css";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
@@ -22,6 +22,9 @@ const Verify = () => {
       navigate("/");
     }
   };
+  useEffect(() => {
+    verifyPayment();
+  }, []);
 
   return (
     <div className="verify">
